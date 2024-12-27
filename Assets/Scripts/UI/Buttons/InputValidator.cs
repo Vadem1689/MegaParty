@@ -7,6 +7,8 @@ public class InputValidator : AbstractButton
     [SerializeField] private TMP_InputField _weightInputField;
     [SerializeField] private TMP_InputField _heightInputField;
     [SerializeField]private TMP_Dropdown  _genderDropdown;
+    [SerializeField]private HomeScreen _homeScreen;
+    [SerializeField]private GameObject _requestScreen;
 
     protected override void OnClick()
     {
@@ -24,6 +26,8 @@ public class InputValidator : AbstractButton
            PlayerPrefs.SetInt("Weight", int.Parse(_weightInputField.text));
            PlayerPrefs.SetInt("Height", int.Parse(_heightInputField.text));
            PlayerPrefs.SetInt("Gender", _genderDropdown.value);
+           _requestScreen.SetActive(false);
+           _homeScreen.gameObject.SetActive(true);
         }
         else
         {
