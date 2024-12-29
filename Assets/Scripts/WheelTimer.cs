@@ -83,14 +83,17 @@ public class WheelTimer : MonoBehaviour
                     /*foreach (var button in buttonSpin)
                         button.interactable = true;*/
                     
-                    _spinButton.ActivateButton();
+                    // _spinButton.ActivateButton();
+                    _spinButton.GetComponent<Button>().interactable = true;
                 }
                 else
                 {
                     // Debug.Log("Не подхзодит");
                     _canSpin.SetActive(false);
                     _nextSpin.SetActive(true);
-                    _spinButton.DeactivateButton();
+                    
+                    // _spinButton.DeactivateButton();
+                    _spinButton.GetComponent<Button>().interactable = false;
 
                     /*foreach (var button in buttonSpin)
                         button.interactable = false;*/
