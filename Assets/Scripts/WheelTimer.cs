@@ -38,9 +38,8 @@ public class WheelTimer : MonoBehaviour
             DateTime tim;
             if (DateTime.TryParse(timing, out tim))
             {
-                // TimeSpan remainingTime = TimeSpan.FromHours(24) - (DateTime.Now - tim);
-                TimeSpan remainingTime = TimeSpan.FromSeconds(15) - (DateTime.Now - tim);
-
+                // TimeSpan remainingTime = TimeSpan.FromSeconds(15) - (DateTime.Now - tim);
+                TimeSpan remainingTime = TimeSpan.FromHours(24) - (DateTime.Now - tim);
                 if (remainingTime <= TimeSpan.Zero)
                 {
                     CheckButtonAvailability();
@@ -72,8 +71,8 @@ public class WheelTimer : MonoBehaviour
 
             if (DateTime.TryParse(timing, out tim))
             {
-                // if (DateTime.Now - tim >= TimeSpan.FromHours(24))
-                if (DateTime.Now - tim >= TimeSpan.FromSeconds(15))
+                // if (DateTime.Now - tim >= TimeSpan.FromSeconds(15))
+                if (DateTime.Now - tim >= TimeSpan.FromHours(24))
                 {
                     
                     // Debug.Log("Подхз/одит");

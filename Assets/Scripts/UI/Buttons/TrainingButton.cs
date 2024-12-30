@@ -9,4 +9,9 @@ public class TrainingButton : AbstractButton
     {
         _workoutSwitcher.Show(_index);
     }
+
+    public void Init(WorkoutSwitcher workoutSwitcher)
+    {
+        _workoutSwitcher = workoutSwitcher;
+    }
 }
