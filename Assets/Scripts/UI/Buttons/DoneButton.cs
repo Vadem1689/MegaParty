@@ -8,12 +8,14 @@ public class DoneButton : AbstractButton
     [SerializeField] private GameObject _effect;
     [SerializeField] private Transform _container;
     [SerializeField] private Sound _sound;
+    [SerializeField] private GameObject _donePanel;
 
     protected override void OnClick()
     {
         _statScreen.AddLastWorkout(_index);
         _screen.gameObject.SetActive(false);
-
+        _donePanel.SetActive(true);
+        
         GameObject spawnedObject = Instantiate(_effect, transform.position, transform.rotation);
         spawnedObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         spawnedObject.transform.SetParent(_container);

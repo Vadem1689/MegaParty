@@ -13,7 +13,7 @@ public class SoundSwitcher : MonoBehaviour
     private void Awake()
     {
         _currentValue = PlayerPrefs.GetInt("Sound", _defaultValue);
-        AudioListener.volume = _defaultValue;
+        AudioListener.volume = _currentValue;
         _soundImage.sprite = _currentValue == 1 ? _on : _off;
     }
 
@@ -23,11 +23,13 @@ public class SoundSwitcher : MonoBehaviour
         {
             _currentValue = 0;
             SetValue(_currentValue);
+            AudioListener.volume = _currentValue;
         }
         else
         {
             _currentValue = 1;
             SetValue(_currentValue);
+            AudioListener.volume = _currentValue;
         }
     }
 
@@ -35,5 +37,6 @@ public class SoundSwitcher : MonoBehaviour
     {
         PlayerPrefs.SetInt("Sound", value);
         _soundImage.sprite = value == 1 ? _on : _off;
+        AudioListener.volume = value;
     }
 }
