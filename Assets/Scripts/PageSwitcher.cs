@@ -6,7 +6,7 @@ public class PageSwitcher : MonoBehaviour
 
     private void Start()
     {
-        ShowPage(0);
+        // ShowPage(0);
     }
 
     public void ShowPage(int index)

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
-    private int _defaultvalue = 0;
+    private int _defaultValue = 0;
 
     public event Action<int> BonusesChanged;
 
@@ -11,7 +11,7 @@ public class Wallet : MonoBehaviour
 
     private void Start()
     {
-        CurrentBonuses = PlayerPrefs.GetInt("Bonuses", _defaultvalue);
+        CurrentBonuses = PlayerPrefs.GetInt("Bonuses", _defaultValue);
         BonusesChanged?.Invoke(CurrentBonuses);
     }
 
