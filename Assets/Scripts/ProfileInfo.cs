@@ -18,7 +18,7 @@ public class ProfileInfo : MonoBehaviour
         Show();
     }
 
-    private void Show()
+    public void Show()
     {
         _nameText.text = PlayerPrefs.GetString("Name");
         _weightText.text = PlayerPrefs.GetInt("Weight").ToString();

@@ -7,7 +7,7 @@ public class HomeScreen : MonoBehaviour
 {
     [SerializeField] private TMP_Text _date;
     [SerializeField] private TMP_Text _name;
-
+    
     private void OnEnable()
     {
         UpdateDateText();
